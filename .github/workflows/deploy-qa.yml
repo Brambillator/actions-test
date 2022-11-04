@@ -1,5 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Deploy
+run-name: ${{ github.actor }} deploys on QA for testing 🚀
 on: 
   push:
     branches:
@@ -40,5 +40,5 @@ jobs:
             cp text-file.txt dist/text-file-qa.txt
       - name: Display file content
         working-directory: ${{ github.workspace }}/dist
-        run: cat text-file.txt
+        run: cat text-file-qa.txt
       - run: echo "🍏 This job's status is ${{ job.status }}."
