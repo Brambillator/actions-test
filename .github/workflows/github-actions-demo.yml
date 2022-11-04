@@ -19,7 +19,7 @@ jobs:
         run: |
             cd ${{ github.workspace }}
             mkdir dist
-            cp text-file.txt mkdir/text-file.txt
+            cp text-file.txt dist/text-file.txt
       - name: Display file content
         working-directory: my/directory
         run: cat text-file.txt
