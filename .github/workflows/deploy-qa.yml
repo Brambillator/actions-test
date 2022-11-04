@@ -37,7 +37,7 @@ jobs:
         run: |
             cd ${{ github.workspace }}
             mkdir dist
-            cp text-file.txt dist/text-file-qa.txt
+            cp text-file-qa.txt dist/text-file-qa.txt
       - name: Display file content
         working-directory: ${{ github.workspace }}/dist
         run: cat text-file-qa.txt
