@@ -20,6 +20,7 @@ jobs:
 
   Test:
     needs: Build
+    runs-on: ubuntu-latest
     environment: qa
     steps:
       - run: echo "Set to FAST TEST!"

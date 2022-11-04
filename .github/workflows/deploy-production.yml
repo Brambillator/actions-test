@@ -20,6 +20,8 @@ jobs:
 
   Test:
     needs: Build
+    runs-on: ubuntu-latest
+    environment: production
     steps:
       - run: echo "Set to FULL TEST!"
       - name: List files in the repository
