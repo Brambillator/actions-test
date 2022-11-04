@@ -21,6 +21,6 @@ jobs:
             mkdir dist
             cp text-file.txt dist/text-file.txt
       - name: Display file content
-        working-directory: my/directory
+        working-directory: ${{ github.workspace }}/dist
         run: cat text-file.txt
       - run: echo "🍏 This job's status is ${{ job.status }}."
