@@ -34,10 +34,11 @@ jobs:
     environment: qa
     steps:
       - name: Create folder
-        run: |
-            cd ${{ github.workspace }}
-            mkdir dist
-            cp text-file-qa.txt dist/text-file-qa.txt
+        working-directory: ${{ github.workspace }}
+        run: mkdir dist
+      - name: Copy file
+        working-directory: ${{ github.workspace }}
+        run: cp text-file-qa.txt dist/text-file-qa.txt
       - name: Display file content
         working-directory: ${{ github.workspace }}/dist
         run: cat text-file-qa.txt
