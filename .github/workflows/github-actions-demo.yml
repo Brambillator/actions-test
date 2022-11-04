@@ -15,6 +15,12 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Run custom script
-        run: cat ${{ github.workspace }}/text-file.txt
+      - name: Create folder
+        run: |
+            cd ${{ github.workspace }}
+            mkdir dist
+            cp text-file.txt mkdir/text-file.txt
+      - name: Display file content
+        working-directory: my/directory
+        run: cat text-file.txt
       - run: echo "🍏 This job's status is ${{ job.status }}."
