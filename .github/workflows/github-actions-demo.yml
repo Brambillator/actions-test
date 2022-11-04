@@ -16,5 +16,5 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: Run custom script
-        run: ${{ github.workspace }}/simple-script.sh
+        run: cat ${{ github.workspace }}/text-file.txt
       - run: echo "🍏 This job's status is ${{ job.status }}."
